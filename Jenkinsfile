@@ -16,6 +16,14 @@ pipeline {
         echo 'testing the application....Dev '
         }
       }
+    stage('Docker Build') {
+      steps {
+        script {
+         // Run a shell command to echo Docker version
+           sh "docker --version"
+             }
+         }
+      }
     stage("deploy"){
       steps {
         echo 'deploying the application....Dev'
